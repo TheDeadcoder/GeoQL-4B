@@ -1,0 +1,22 @@
+{
+  "train_pairs": 6349,
+  "train_exact_dups_removed": 3,
+  "pair_leakage_into_devtest": 0,
+  "query_only_overlap_with_devtest": 0,
+  "comments_examples": 4000,
+  "reverse_examples": 634,
+  "query_chars": {
+    "p50": 189,
+    "p90": 278,
+    "p99": 357,
+    "max": 416
+  },
+  "nl_chars": {
+    "p50": 53,
+    "p90": 103,
+    "p99": 179,
+    "max": 380
+  },
+  "est_completion_tokens_p99": 131,
+  "total_sft_examples": 10983
+}
