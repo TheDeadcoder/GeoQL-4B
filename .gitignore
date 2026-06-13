@@ -1,7 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
-OverpassNL/
 llama.cpp/
 overpass_db/
 preds/*.jsonl
