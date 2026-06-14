@@ -6,7 +6,7 @@ KVS/struct/chrF/EM proxies (validated: KVS Spearman 0.82 vs official). Five
 separate reward functions => TRL logs each component, so reward-hacking is visible.
 
   # 1. GRPO (H100). vLLM rollouts colocated; saves a checkpoint every 100 steps.
-  modal run grpo_modal.py --action train --max_steps 500
+  modal run --detach --name grpo-r32-500 scripts/grpo_modal.py::train --max-steps 500
 
   # 2. per-checkpoint dev generation (base = the SFT model + GRPO LoRA), then score
   modal run grpo_modal.py --action generate --adapter grpo_r32_lr5e-06_s0/checkpoint-N --name grpo_sN
@@ -303,9 +303,13 @@ REWARD_WEIGHTS = [1.0, GRPO_WEIGHTS["kvs"], GRPO_WEIGHTS["struct"],
 # ===================== Modal app =====================
 SFT_MODEL = "Melikshah/GeoQL-4B-SFT"
 
-PIP_GRPO = ["unsloth", "vllm", "trl", "datasets", "wandb", "huggingface_hub",
+# Unsloth 2025.11.x imports vllm.lora.models for colocated GRPO rollouts.
+# vLLM 0.23 removed that module, so keep the image on the older compatible API.
+PIP_GRPO = ["unsloth==2025.11.1", "unsloth_zoo==2025.11.2", "vllm==0.11.0",
+            "trl==0.23.0", "datasets==5.0.0", "wandb", "huggingface_hub",
             "hf_transfer", "sacrebleu"]
-PIP_INFER = ["vllm", "transformers", "huggingface_hub", "hf_transfer", "sacrebleu"]
+PIP_INFER = ["vllm==0.11.0", "transformers==4.57.2", "huggingface_hub",
+             "hf_transfer", "sacrebleu"]
 ENV = {"HF_HUB_ENABLE_HF_TRANSFER": "1", "VLLM_USE_FLASHINFER_SAMPLER": "0",
        "VLLM_USE_DEEP_GEMM": "0"}
 
@@ -326,16 +330,23 @@ def train(rank: int = 32, lr: float = 5e-6, max_steps: int = 500, num_generation
           gen_bsz: int = 16, accum: int = 4, max_completion: int = 192, max_prompt: int = 512,
           seq_len: int = 1024, temperature: float = 1.0, beta: float = 0.0, seed: int = 0,
           gpu_mem: float = 0.55, save_steps: int = 100, report_to: str = "wandb"):
+    import torch
     from unsloth import FastLanguageModel
     from datasets import load_dataset
     from trl import GRPOConfig, GRPOTrainer
+
+    # Variable-length GRPO completions can trigger many Dynamo specializations in
+    # Unsloth's compiled loss. The default limit is too low and fails at step 0.
+    torch._dynamo.config.cache_size_limit = 256
+    torch._dynamo.config.accumulated_cache_size_limit = 1024
 
     run_name = f"grpo_r{rank}_lr{lr}_s{seed}"
     out_dir = f"/ckpts/{run_name}"
 
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=SFT_MODEL, max_seq_length=seq_len, dtype=None, load_in_4bit=False,
-        fast_inference=True, max_lora_rank=rank, gpu_memory_utilization=gpu_mem)
+        fast_inference=True, max_lora_rank=rank, gpu_memory_utilization=gpu_mem,
+        enforce_eager=True)
     vol_hf.commit()
     model = FastLanguageModel.get_peft_model(
         model, r=rank, lora_alpha=rank, lora_dropout=0.0, bias="none",
@@ -438,10 +449,17 @@ def merge_push(adapter: str, repo: str, private: bool = True):
 def main(action: str, adapter: str = "", repo: str = "", split: str = "dev", name: str = "run",
          base_model: str = SFT_MODEL, rank: int = 32, lr: float = 5e-6, max_steps: int = 500,
          num_generations: int = 8, gen_bsz: int = 16, accum: int = 4, beta: float = 0.0,
-         temperature: float = 0.0, seed: int = 0, report_to: str = "wandb", private: bool = True):
+         temperature: float = 0.0, seed: int = 0, report_to: str = "wandb", private: bool = True,
+         spawn: bool = False):
     if action == "train":
-        print(train.remote(rank=rank, lr=lr, max_steps=max_steps, num_generations=num_generations,
-                           gen_bsz=gen_bsz, accum=accum, beta=beta, seed=seed, report_to=report_to))
+        kwargs = dict(rank=rank, lr=lr, max_steps=max_steps, num_generations=num_generations,
+                      gen_bsz=gen_bsz, accum=accum, beta=beta, seed=seed, report_to=report_to)
+        if spawn:
+            call = train.spawn(**kwargs)
+            cid = getattr(call, "object_id", None) or str(call)
+            print(json.dumps({"status": "spawned", "function_call_id": cid}))
+        else:
+            print(train.remote(**kwargs))
     elif action == "generate":
         print(generate.remote(split=split, adapter=adapter, name=name, base_model=base_model,
                               temperature=temperature, seed=seed))

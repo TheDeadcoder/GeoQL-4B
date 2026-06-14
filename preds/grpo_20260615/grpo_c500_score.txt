@@ -1,0 +1,15 @@
+split=dev  n=1000  fallback/empty=18  sanity_flagged=3
+  proxy_OQS=72.32  EM=17.40  chrF=72.83  KVS*=62.05  TreeS*=82.09
+  (* = offline proxy; confirm final pick with official run_evaluation.py)
+
+  5 worst by proxy_OQS:
+  [oqs=4 kvs=0] pred: node(1);out;
+                      gold: [bbox:{{bbox}}][timeout:120];(way["leisure"="park"];relation["leisure"="park"];w
+  [oqs=5 kvs=0] pred: node(1);out;
+                      gold: area["name"="Den Haag"]->.boundaryarea;(nwr["amenity"="hospital"](area.boundarya
+  [oqs=6 kvs=0] pred: node(1);out;
+                      gold: [timeout:100];(way["highway"="footway"]({{bbox}});way["landuse"="grass"]({{bbox}
+  [oqs=7 kvs=0] pred: node(1);out;
+                      gold: [out:xml][timeout:600];nwr["camp_site"="reception"]->.all;(nwr["camp_site"="camp
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(area["name"="Edinburgh"];)->.a;(node["shop"](area.a);nod
