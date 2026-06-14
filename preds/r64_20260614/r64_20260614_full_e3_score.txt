@@ -1,0 +1,15 @@
+split=dev  n=1000  fallback/empty=34  sanity_flagged=1
+  proxy_OQS=70.76  EM=16.50  chrF=70.55  KVS*=60.71  TreeS*=81.02
+  (* = offline proxy; confirm final pick with official run_evaluation.py)
+
+  5 worst by proxy_OQS:
+  [oqs=5 kvs=0] pred: node(1);out;
+                      gold: area["name"="Den Haag"]->.boundaryarea;(nwr["amenity"="hospital"](area.boundarya
+  [oqs=7 kvs=0] pred: node(1);out;
+                      gold: [out:xml][timeout:600];nwr["camp_site"="reception"]->.all;(nwr["camp_site"="camp
+  [oqs=7 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:60];{{geocodeArea:"Rheinland-Pfalz"}}->.searchArea;(node["tou
+  [oqs=7 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];{{geocodeArea:"Baden-Württemberg"}}->.searchArea;(way["hi
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(way["highway"]({{bbox}})(changed:"2016-05-18T00:18:00Z",

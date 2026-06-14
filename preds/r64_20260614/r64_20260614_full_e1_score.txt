@@ -1,0 +1,15 @@
+split=dev  n=1000  fallback/empty=33  sanity_flagged=0
+  proxy_OQS=67.30  EM=10.20  chrF=68.05  KVS*=54.79  TreeS*=79.05
+  (* = offline proxy; confirm final pick with official run_evaluation.py)
+
+  5 worst by proxy_OQS:
+  [oqs=5 kvs=0] pred: node(1);out;
+                      gold: area["admin_level"="8"]["name"="Nantes"]->.a;(nwr["shop"](area.a)(newer:"2018-09
+  [oqs=6 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(nwr["zero_waste"~"(yes|only|limited)"]({{bbox}});nwr[~"d
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(area["name"="Edinburgh"];)->.a;(node["shop"](area.a);nod
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:600];{{geocodeArea:"Berlin"}}->.searchArea;relation["type"="r
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [maxsize:20000000000][out:json][timeout:600][date:"2017-11-30T00:00:00Z"];{{geoc

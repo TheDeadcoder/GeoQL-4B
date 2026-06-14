@@ -1,0 +1,15 @@
+split=dev  n=1000  fallback/empty=19  sanity_flagged=2
+  proxy_OQS=72.06  EM=18.20  chrF=72.36  KVS*=61.82  TreeS*=82.01
+  (* = offline proxy; confirm final pick with official run_evaluation.py)
+
+  5 worst by proxy_OQS:
+  [oqs=7 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:60];{{geocodeArea:"Rheinland-Pfalz"}}->.searchArea;(node["tou
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(nwr["harbour"="yes"](around:2000,{{center}});nwr["seamar
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [out:json][timeout:25];(area["name"="Edinburgh"];)->.a;(node["shop"](area.a);nod
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: area["name"="Österreich"]->.a;(way["landuse"="allotments"]["name"~"^Kleingartenv
+  [oqs=8 kvs=0] pred: node(1);out;
+                      gold: [maxsize:20000000000][out:json][timeout:600][date:"2017-11-30T00:00:00Z"];{{geoc

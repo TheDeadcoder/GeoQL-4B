@@ -1,0 +1,11 @@
+variant	checkpoint	epoch	name	proxy_OQS	EM	chrF	KVS	TreeS	raw_file	score_file
+full	checkpoint-1720	5	r64_20260614_full_e5	72.22	18.30	72.22	62.14	82.30	preds/r64_20260614/r64_20260614_full_e5_dev.jsonl	preds/r64_20260614/r64_20260614_full_e5_score.txt
+noaux	checkpoint-796	4	r64_20260614_noaux_e4	72.06	18.20	72.36	61.82	82.01	preds/r64_20260614/r64_20260614_noaux_e4_dev.jsonl	preds/r64_20260614/r64_20260614_noaux_e4_score.txt
+full	checkpoint-1376	4	r64_20260614_full_e4	72.01	18.20	71.80	62.35	81.88	preds/r64_20260614/r64_20260614_full_e4_dev.jsonl	preds/r64_20260614/r64_20260614_full_e4_score.txt
+noaux	checkpoint-597	3	r64_20260614_noaux_e3	71.72	16.90	71.88	62.09	81.19	preds/r64_20260614/r64_20260614_noaux_e3_dev.jsonl	preds/r64_20260614/r64_20260614_noaux_e3_score.txt
+noaux	checkpoint-995	5	r64_20260614_noaux_e5	71.68	18.00	71.87	61.16	82.00	preds/r64_20260614/r64_20260614_noaux_e5_dev.jsonl	preds/r64_20260614/r64_20260614_noaux_e5_score.txt
+full	checkpoint-1032	3	r64_20260614_full_e3	70.76	16.50	70.55	60.71	81.02	preds/r64_20260614/r64_20260614_full_e3_dev.jsonl	preds/r64_20260614/r64_20260614_full_e3_score.txt
+noaux	checkpoint-398	2	r64_20260614_noaux_e2	70.04	14.10	69.71	60.08	80.32	preds/r64_20260614/r64_20260614_noaux_e2_dev.jsonl	preds/r64_20260614/r64_20260614_noaux_e2_score.txt
+full	checkpoint-688	2	r64_20260614_full_e2	69.40	14.00	69.00	59.74	79.47	preds/r64_20260614/r64_20260614_full_e2_dev.jsonl	preds/r64_20260614/r64_20260614_full_e2_score.txt
+full	checkpoint-344	1	r64_20260614_full_e1	67.30	10.20	68.05	54.79	79.05	preds/r64_20260614/r64_20260614_full_e1_dev.jsonl	preds/r64_20260614/r64_20260614_full_e1_score.txt
+noaux	checkpoint-199	1	r64_20260614_noaux_e1	67.28	9.60	67.33	55.64	78.87	preds/r64_20260614/r64_20260614_noaux_e1_dev.jsonl	preds/r64_20260614/r64_20260614_noaux_e1_score.txt

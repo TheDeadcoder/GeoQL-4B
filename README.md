@@ -12,4 +12,3 @@ llama.cpp. Built for the HF build-small hackathon (Backyard AI track).
 - `docs/`      day-by-day runbooks
 
 ## Quickstart
-See docs/day0_runbook.md then docs/day1_pipeline.md
