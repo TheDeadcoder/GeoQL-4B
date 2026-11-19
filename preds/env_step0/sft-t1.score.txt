@@ -1,0 +1,30 @@
+run: model Melikshah/GeoQL-4B-SFT, mode single_shot, tools -
+accuracy 0.134 (95% CI 0.082-0.192) over 72 tasks in 65 intents and 16 epochs
+per epoch 0.181 0.125 0.236 0.097 0.083 0.111 0.125 0.097 0.056 0.125 0.139 0.181 0.139 0.139 0.125 0.181 (sd 0.044)
+accuracy on the real world alone 0.225; inflation +0.091 (95% CI +0.055 to +0.133)
+agreement per world: real 0.220, w1 0.154, w2 0.148, w3 0.147
+mean F1 on the real world 0.280; valid queries 0.793
+categories: wrong_real 653, pass 154, rejected 120, query_error 117, wrong_witness 100, wrong_answer_type 7, runtime_error 1
+OverpassNL's metrics against the first interpretation on the real world: exact match 0.000, OQS 0.476 (chrF 0.489, key-value 0.475, tree 0.465), execution 0.121 (soft 0.187); compared canonically 0.209
+execution match and this grade: both pass 85, execution only 54, this grade only 69, neither 944
+family             accuracy  tasks
+attribute_filters     0.188      6
+containment           0.070      8
+counting              0.036      7
+element_types         0.146      6
+judgment_calls        0.214      7
+name_matching         0.292      6
+proximity             0.198      6
+relations             0.000      7
+set_composition       0.062      6
+tag_grounding         0.219      6
+viewport              0.098      7
+tag frequency  accuracy  tasks
+common            0.165     22
+uncommon          0.123     27
+rare              0.117     23
+drafted by  accuracy  tasks
+model          0.134     72
+minimal pairs: consistency 0.134 (both tasks pass) over 7 pairs; accuracy on their tasks 0.205
+missing: none
+provenance: tasks 0741a2bbbe84, gold 172a3c164052, prompt a6c16acc42ae

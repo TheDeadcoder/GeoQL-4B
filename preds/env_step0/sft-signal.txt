@@ -1,0 +1,37 @@
+== starting point, 16 samples per task at temperature 1.0
+  test 67 tasks  pass@1  13.6  pass@2  21.1  pass@4  28.8  pass@8  35.5  pass@16  41.8
+       pass@1 on the real world only  23.0  greedy  29.9
+       tasks with right and wrong samples 28, all wrong 39, all right 0
+  all  72 tasks  pass@1  13.4  pass@2  20.9  pass@4  28.8  pass@8  35.7  pass@16  41.7
+       pass@1 on the real world only  22.5  greedy  29.2
+       tasks with right and wrong samples 30, all wrong 42, all right 0
+
+== outcomes of the test samples
+  wrong_real 56.0%, pass 13.6%, query_error 10.6%, rejected 10.2%, wrong_witness 9.0%, wrong_answer_type 0.6%, runtime_error 0.1%
+  cut off at the token limit: 1 of 1072
+
+== what each reward pays among the test samples (the environment reward pays right samples only)
+  real-world-only reward: 101 of the 247 samples it pays are wrong on the witness worlds (40.9%), in 32 tasks
+  real-world-only reward: ranks a right sample above a wrong one 86.6% of the time (ties half, 28 tasks with both); on average 31.5% of a task's positive advantage goes to wrong samples (28 tasks with any)
+  old GRPO reward: ranks a right sample above a wrong one 77.4% of the time (ties half, 28 tasks with both); on average 47.7% of a task's positive advantage goes to wrong samples (28 tasks with any)
+  old GRPO reward: mean 0.615 on right samples, 0.365 on wrong ones; its best-scored samples are all wrong in 13 of the 28 tasks that have a right one
+
+== style of the test samples and of the references (first reading)
+  ends out;>;out skel qt;  samples  44.2%  references   0.0%
+  [out:json][timeout:25]   samples  30.6%  references   0.0%
+  {{geocodeArea:...}}      samples  50.2%  references  59.7%
+  nwr                      samples  11.8%  references  83.6%
+  out count                samples  12.5%  references  13.4%
+
+== pass@1 by family (test)
+  name_matching       6 tasks   29.2
+  judgment_calls      6 tasks   25.0
+  tag_grounding       6 tasks   21.9
+  proximity           6 tasks   19.8
+  attribute_filters   6 tasks   18.8
+  element_types       6 tasks   14.6
+  containment         6 tasks    9.4
+  viewport            6 tasks    7.3
+  set_composition     6 tasks    6.2
+  counting            6 tasks    0.0
+  relations           7 tasks    0.0

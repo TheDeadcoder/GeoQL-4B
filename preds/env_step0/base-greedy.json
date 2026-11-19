@@ -1,0 +1,1874 @@
+{
+  "provenance": {
+    "geoql_env": "0.1.0",
+    "engine": "wiktorn/overpass-api:v0.7.62.11@sha256:5f643f2aa500333f19458fe8be14457215d6e0b9f891ca5c5ed452b1f8882c47",
+    "worlds": {
+      "ad-andorra": "dab3167c7c583dc9efb06a80479b08bbfa322ce56ba18ba0f8ca47e47ca35c0a",
+      "lu-luxembourg-city": "d8f3e1dabb4d9d5489500c35432eb393089c32222cfff8cf50706852f0696a80",
+      "mc-monaco": "2c0debd7676c0d0d80ec534251cb004a6797441d14512cb83d01fe1ad81363bf",
+      "mv-maldives": "22f8606c845ef2eaff54d5b550b486595cdb900ffeafffb0cc62b2897197f837"
+    },
+    "tagdocs": "sha512-z2nQgHLNwCjebDxlKBaERjg02UmcJyemAtsXExJFlXNNc4K9l7EdtfkGs064Y0IgzUltmUxM/FeUBRyhb4kv6w==",
+    "tasks": "0741a2bbbe847920eb5f20125d108298c8ade1c36a73d9e9fda9309d76b557ba",
+    "gold": "172a3c16405238a3cad35ddb83983a1444af7de66412829cd7faa2875bf36703",
+    "tag_counts": "94db7a7656e2c9458ffdf0c8f1e3e8410dd68fed0c702005a0f73ff388240e73",
+    "prompt": "a6c16acc42ae863c666bab94f8dc4a6770cdeaed830fd495b7b192e7f29af961"
+  },
+  "run": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "mode": "single_shot",
+    "tools": "-"
+  },
+  "summary": {
+    "tasks": 72,
+    "intents": 65,
+    "epochs": 1,
+    "accuracy": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "real_accuracy": 0.041666666666666664,
+    "inflation": 0.041666666666666664,
+    "inflation_ci95": [
+      0.0,
+      0.1095890410958904
+    ],
+    "agreement": {
+      "real": 0.041666666666666664,
+      "w1": 0.0,
+      "w2": 0.0,
+      "w3": 0.0
+    },
+    "epoch_accuracy": {
+      "1": 0.0
+    },
+    "epoch_sd": null,
+    "mean_f1": 0.07476250000000001,
+    "valid": 0.3472222222222222,
+    "categories": {
+      "query_error": 46,
+      "wrong_real": 22,
+      "wrong_witness": 3,
+      "rejected": 1
+    },
+    "families": {
+      "attribute_filters": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "containment": {
+        "tasks": 8,
+        "accuracy": 0.0
+      },
+      "counting": {
+        "tasks": 7,
+        "accuracy": 0.0
+      },
+      "element_types": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "judgment_calls": {
+        "tasks": 7,
+        "accuracy": 0.0
+      },
+      "name_matching": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "proximity": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "relations": {
+        "tasks": 7,
+        "accuracy": 0.0
+      },
+      "set_composition": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "tag_grounding": {
+        "tasks": 6,
+        "accuracy": 0.0
+      },
+      "viewport": {
+        "tasks": 7,
+        "accuracy": 0.0
+      }
+    },
+    "tag_frequency": {
+      "common": {
+        "tasks": 22,
+        "accuracy": 0.0
+      },
+      "uncommon": {
+        "tasks": 27,
+        "accuracy": 0.0
+      },
+      "rare": {
+        "tasks": 23,
+        "accuracy": 0.0
+      }
+    },
+    "drafted_by": {
+      "model": {
+        "tasks": 72,
+        "accuracy": 0.0
+      }
+    },
+    "pairs": {
+      "pairs": 7,
+      "consistency": 0.0,
+      "accuracy": 0.0
+    },
+    "missing": [],
+    "overpassnl": {
+      "em": 0.0,
+      "chrf": 0.3056815801874562,
+      "kvs": 0.07148173585673585,
+      "trees": 0.10698887465191813,
+      "oqs": 0.16138406356537008,
+      "ex": 0.013888888888888888,
+      "ex_soft": 0.0415992322855068,
+      "real_first": 0.027777777777777776
+    },
+    "execution_agreement": {
+      "both": 0,
+      "execution_only": 1,
+      "grade_only": 0,
+      "neither": 71
+    }
+  },
+  "records": [
+    {
+      "task": "ad-01",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2799350433832431,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.0933116811277477,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-02",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.30578120581689144,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10192706860563049,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-03",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3997690874786042,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.13325636249286807,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-04",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.10270193986559009,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.0342339799551967,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-05",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.13629617966436586,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.045432059888121955,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-06",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.30388654781385915,
+        "kvs": 0.2,
+        "trees": 0.2857142857142857,
+        "oqs": 0.263200277842715,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-07",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2549056732430871,
+        "kvs": 0.5,
+        "trees": 0.375,
+        "oqs": 0.3766352244143623,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-08",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3725165663059584,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.12417218876865281,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-09",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.14412208652368091,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.04804069550789364,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-10",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.20976078258360384,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.06992026086120127,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-11",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.4051,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4029540600641202,
+        "kvs": 0.5,
+        "trees": 0.2857142857142857,
+        "oqs": 0.39622278192613525,
+        "ex": false,
+        "ex_soft": 0.25396825396825395,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-12",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.11983236316720094,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.039944121055733646,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-13",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.15540633221563055,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.051802110738543516,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-14",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.43285222740301743,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1442840758010058,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-15",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.9831,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.30661124559525765,
+        "kvs": 0.6,
+        "trees": 0.2857142857142857,
+        "oqs": 0.39744184376984776,
+        "ex": false,
+        "ex_soft": 0.9666666666666667,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-16",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.1442266623776215,
+        "kvs": 0.04,
+        "trees": 0.5,
+        "oqs": 0.22807555412587385,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-17",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.11727106263357195,
+        "kvs": 0.0,
+        "trees": 0.3333333333333333,
+        "oqs": 0.15020146532230175,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-18",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2569048905849193,
+        "kvs": 0.16666666666666666,
+        "trees": 0.18181818181818182,
+        "oqs": 0.2017965796899226,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-01",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.34305235398128686,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.11435078466042896,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-02",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4364428033396419,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1454809344465473,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.43047778375878387,
+        "kvs": 0.2,
+        "trees": 0.375,
+        "oqs": 0.33515926125292794,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-04",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.30521366346764084,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10173788782254695,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-05",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4335771627970901,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.14452572093236335,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-06",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4299861501735538,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.14332871672451794,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-07",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3579565131549507,
+        "kvs": 0.4444444444444444,
+        "trees": 0.42857142857142855,
+        "oqs": 0.4103241287236079,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-08",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3022873027112191,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10076243423707304,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-09",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.35483241358992706,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.11827747119664235,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.1947,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2605899605750893,
+        "kvs": 0.375,
+        "trees": 0.5384615384615384,
+        "oqs": 0.3913504996788759,
+        "ex": false,
+        "ex_soft": 0.10784313725490197,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-11",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2166203667801043,
+        "kvs": 0.1111111111111111,
+        "trees": 0.2857142857142857,
+        "oqs": 0.2044819212018337,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-12",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.17376353395938296,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.05792117798646099,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-13",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.19917016385248745,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.06639005461749582,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-14",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4157661688501242,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1385887229500414,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-15",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.35492286943696294,
+        "kvs": 0.5,
+        "trees": 0.375,
+        "oqs": 0.40997428981232104,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-16",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2072282809475391,
+        "kvs": 0.0,
+        "trees": 0.5,
+        "oqs": 0.23574276031584637,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-17",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.8,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.37237472622431683,
+        "kvs": 0.5,
+        "trees": 0.2857142857142857,
+        "oqs": 0.3860296706462008,
+        "ex": false,
+        "ex_soft": 0.6666666666666666,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-18",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2542360890102569,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.08474536300341896,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-01",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4403704222735673,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.14679014075785576,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-02",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4267767544850064,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1422589181616688,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-03",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.31439278798060233,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10479759599353411,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-04",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.470239514083002,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.15674650469433402,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-05",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3562531683283342,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.11875105610944474,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-06",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.39954565711655887,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.13318188570551961,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-07",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.540807331781286,
+        "kvs": 0.4444444444444444,
+        "trees": 0.375,
+        "oqs": 0.45341725874191013,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-08",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.14496673289911138,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.0483222442997038,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-09",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3578695623860179,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.11928985412867264,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2133816058182635,
+        "kvs": 0.07142857142857142,
+        "trees": 0.25,
+        "oqs": 0.1782700590822783,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-11",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.27112567616799443,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.09037522538933147,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-12",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.249995316808595,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.08333177226953166,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-13",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2673929307769907,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.08913097692566357,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-14",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.11317881958914473,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.037726273196381575,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-15",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3091572444369715,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10305241481232384,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-16",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.136717687867189,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.04557256262239633,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-17",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4635780850900096,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.15452602836333654,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-01",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2502888314569969,
+        "kvs": 0.0,
+        "trees": 0.2857142857142857,
+        "oqs": 0.17866770572376087,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-02",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.20998931187917175,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.06999643729305725,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4766430537280499,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.15888101790934997,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-04",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.31111403370570817,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10370467790190273,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-05",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4023662091767708,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.13412206972559026,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-06",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.27239952343693774,
+        "kvs": 0.07692307692307693,
+        "trees": 0.30434782608695654,
+        "oqs": 0.2178901421489904,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-07",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3384507289492543,
+        "kvs": 0.0,
+        "trees": 0.5,
+        "oqs": 0.2794835763164181,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-08",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.42077385678211143,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1402579522607038,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-09",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.13110242985106027,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.04370080995035342,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-10",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.17348879931233388,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.05782959977077796,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-11",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3425359128821736,
+        "kvs": 0.16666666666666666,
+        "trees": 0.2857142857142857,
+        "oqs": 0.264972288421042,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-12",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3019776133993892,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10065920446646308,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-13",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.14876616165521106,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.04958872055173702,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-14",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4850620184361116,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.16168733947870387,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-15",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.526163598365199,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.175387866121733,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-16",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5192623519009815,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1730874506336605,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-17",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3175840885291267,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10586136284304222,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-18",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.20711506630228127,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.06903835543409376,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-19",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "B",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4040086225287531,
+        "kvs": 0.25,
+        "trees": 0.6666666666666666,
+        "oqs": 0.44022509639847324,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+== starting point, 16 samples per task at temperature 1.0
+  test 67 tasks  pass@1   0.0  pass@2   0.0  pass@4   0.0  pass@8   0.0  pass@16   0.0
+       pass@1 on the real world only   2.7  greedy   0.0
+       tasks with right and wrong samples 0, all wrong 67, all right 0
+  all  72 tasks  pass@1   0.0  pass@2   0.0  pass@4   0.0  pass@8   0.0  pass@16   0.0
+       pass@1 on the real world only   2.6  greedy   0.0
+       tasks with right and wrong samples 0, all wrong 72, all right 0
+
+== outcomes of the test samples
+  query_error 72.3%, wrong_real 23.3%, wrong_witness 2.7%, rejected 1.6%, wrong_answer_type 0.1%
+  cut off at the token limit: 57 of 1072
+
+== what each reward pays among the test samples (the environment reward pays right samples only)
+  real-world-only reward: 29 of the 29 samples it pays are wrong on the witness worlds (100.0%), in 9 tasks
+  real-world-only reward: no test task has both right and wrong samples
+  old GRPO reward: no test task has both right and wrong samples
+  old GRPO reward: mean nan on right samples, 0.140 on wrong ones; its best-scored samples are all wrong in 0 of the 0 tasks that have a right one
+
+== style of the test samples and of the references (first reading)
+  ends out;>;out skel qt;  samples  12.3%  references   0.0%
+  [out:json][timeout:25]   samples  47.4%  references   0.0%
+  {{geocodeArea:...}}      samples   3.3%  references  59.7%
+  nwr                      samples   0.4%  references  83.6%
+  out count                samples   6.9%  references  13.4%
+
+== pass@1 by family (test)
+  counting            6 tasks    0.0
+  attribute_filters   6 tasks    0.0
+  tag_grounding       6 tasks    0.0
+  name_matching       6 tasks    0.0
+  set_composition     6 tasks    0.0
+  element_types       6 tasks    0.0
+  containment         6 tasks    0.0
+  proximity           6 tasks    0.0
+  viewport            6 tasks    0.0
+  relations           7 tasks    0.0
+  judgment_calls      6 tasks    0.0
