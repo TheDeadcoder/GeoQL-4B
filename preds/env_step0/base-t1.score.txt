@@ -1,0 +1,30 @@
+run: model Qwen/Qwen3-4B-Instruct-2507, mode single_shot, tools -
+accuracy 0.000 (95% CI 0.000-0.000) over 72 tasks in 65 intents and 16 epochs
+per epoch 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 (sd 0.000)
+accuracy on the real world alone 0.026; inflation +0.026 (95% CI +0.007 to +0.055)
+agreement per world: real 0.026, w1 0.004, w2 0.003, w3 0.000
+mean F1 on the real world 0.036; valid queries 0.271
+categories: query_error 823, wrong_real 281, wrong_witness 30, rejected 17, wrong_answer_type 1
+OverpassNL's metrics against the first interpretation on the real world: exact match 0.000, OQS 0.152 (chrF 0.320, key-value 0.059, tree 0.077), execution 0.005 (soft 0.017); compared canonically 0.022
+execution match and this grade: both pass 0, execution only 6, this grade only 0, neither 1146
+family             accuracy  tasks
+attribute_filters     0.000      6
+containment           0.000      8
+counting              0.000      7
+element_types         0.000      6
+judgment_calls        0.000      7
+name_matching         0.000      6
+proximity             0.000      6
+relations             0.000      7
+set_composition       0.000      6
+tag_grounding         0.000      6
+viewport              0.000      7
+tag frequency  accuracy  tasks
+common            0.000     22
+uncommon          0.000     27
+rare              0.000     23
+drafted by  accuracy  tasks
+model          0.000     72
+minimal pairs: consistency 0.000 (both tasks pass) over 7 pairs; accuracy on their tasks 0.000
+missing: none
+provenance: tasks 0741a2bbbe84, gold 172a3c164052, prompt a6c16acc42ae

@@ -1,0 +1,1875 @@
+{
+  "provenance": {
+    "geoql_env": "0.1.0",
+    "engine": "wiktorn/overpass-api:v0.7.62.11@sha256:5f643f2aa500333f19458fe8be14457215d6e0b9f891ca5c5ed452b1f8882c47",
+    "worlds": {
+      "ad-andorra": "dab3167c7c583dc9efb06a80479b08bbfa322ce56ba18ba0f8ca47e47ca35c0a",
+      "lu-luxembourg-city": "d8f3e1dabb4d9d5489500c35432eb393089c32222cfff8cf50706852f0696a80",
+      "mc-monaco": "2c0debd7676c0d0d80ec534251cb004a6797441d14512cb83d01fe1ad81363bf",
+      "mv-maldives": "22f8606c845ef2eaff54d5b550b486595cdb900ffeafffb0cc62b2897197f837"
+    },
+    "tagdocs": "sha512-z2nQgHLNwCjebDxlKBaERjg02UmcJyemAtsXExJFlXNNc4K9l7EdtfkGs064Y0IgzUltmUxM/FeUBRyhb4kv6w==",
+    "tasks": "0741a2bbbe847920eb5f20125d108298c8ade1c36a73d9e9fda9309d76b557ba",
+    "gold": "172a3c16405238a3cad35ddb83983a1444af7de66412829cd7faa2875bf36703",
+    "tag_counts": "94db7a7656e2c9458ffdf0c8f1e3e8410dd68fed0c702005a0f73ff388240e73",
+    "prompt": "a6c16acc42ae863c666bab94f8dc4a6770cdeaed830fd495b7b192e7f29af961"
+  },
+  "run": {
+    "model": "Melikshah/GeoQL-4B-SFT",
+    "mode": "single_shot",
+    "tools": "-"
+  },
+  "summary": {
+    "tasks": 72,
+    "intents": 65,
+    "epochs": 1,
+    "accuracy": 0.2916666666666667,
+    "ci95": [
+      0.18055555555555555,
+      0.4084507042253521
+    ],
+    "real_accuracy": 0.3888888888888889,
+    "inflation": 0.09722222222222221,
+    "inflation_ci95": [
+      0.02702702702702703,
+      0.18666666666666668
+    ],
+    "agreement": {
+      "real": 0.3888888888888889,
+      "w1": 0.3055555555555556,
+      "w2": 0.2916666666666667,
+      "w3": 0.3055555555555556
+    },
+    "epoch_accuracy": {
+      "1": 0.2916666666666667
+    },
+    "epoch_sd": null,
+    "mean_f1": 0.4650944444444445,
+    "valid": 0.875,
+    "categories": {
+      "wrong_real": 35,
+      "pass": 21,
+      "wrong_witness": 7,
+      "rejected": 6,
+      "query_error": 3
+    },
+    "families": {
+      "attribute_filters": {
+        "tasks": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "containment": {
+        "tasks": 8,
+        "accuracy": 0.25
+      },
+      "counting": {
+        "tasks": 7,
+        "accuracy": 0.0
+      },
+      "element_types": {
+        "tasks": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "judgment_calls": {
+        "tasks": 7,
+        "accuracy": 0.42857142857142855
+      },
+      "name_matching": {
+        "tasks": 6,
+        "accuracy": 0.5
+      },
+      "proximity": {
+        "tasks": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "relations": {
+        "tasks": 7,
+        "accuracy": 0.0
+      },
+      "set_composition": {
+        "tasks": 6,
+        "accuracy": 0.16666666666666666
+      },
+      "tag_grounding": {
+        "tasks": 6,
+        "accuracy": 0.5
+      },
+      "viewport": {
+        "tasks": 7,
+        "accuracy": 0.42857142857142855
+      }
+    },
+    "tag_frequency": {
+      "common": {
+        "tasks": 22,
+        "accuracy": 0.3181818181818182
+      },
+      "uncommon": {
+        "tasks": 27,
+        "accuracy": 0.2962962962962963
+      },
+      "rare": {
+        "tasks": 23,
+        "accuracy": 0.2608695652173913
+      }
+    },
+    "drafted_by": {
+      "model": {
+        "tasks": 72,
+        "accuracy": 0.2916666666666667
+      }
+    },
+    "pairs": {
+      "pairs": 7,
+      "consistency": 0.2857142857142857,
+      "accuracy": 0.35714285714285715
+    },
+    "missing": [],
+    "overpassnl": {
+      "em": 0.0,
+      "chrf": 0.5185404330704946,
+      "kvs": 0.6110034255867589,
+      "trees": 0.5659950673990529,
+      "oqs": 0.5651796420187688,
+      "ex": 0.1527777777777778,
+      "ex_soft": 0.27053198761538155,
+      "real_first": 0.3611111111111111
+    },
+    "execution_agreement": {
+      "both": 8,
+      "execution_only": 3,
+      "grade_only": 13,
+      "neither": 48
+    }
+  },
+  "records": [
+    {
+      "task": "ad-01",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": true,
+        "w2": false,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.7890700842913333,
+        "kvs": 0.6666666666666666,
+        "trees": 0.75,
+        "oqs": 0.7352455836526666,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-02",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.40112844047489776,
+        "kvs": 0.5,
+        "trees": 0.2857142857142857,
+        "oqs": 0.3956142420630611,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5210692434673388,
+        "kvs": 0.5714285714285714,
+        "trees": 0.46153846153846156,
+        "oqs": 0.5180120921447906,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-04",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5981346442094908,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7708067861650684,
+        "ex": false,
+        "ex_soft": 0.20714285714285716,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-05",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5974823787089828,
+        "kvs": 1.0,
+        "trees": 0.75,
+        "oqs": 0.7824941262363275,
+        "ex": false,
+        "ex_soft": 0.1111111111111111,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-06",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6745050593135844,
+        "kvs": 0.7,
+        "trees": 0.5,
+        "oqs": 0.6248350197711948,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-07",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5105447962218884,
+        "kvs": 0.16666666666666666,
+        "trees": 0.75,
+        "oqs": 0.475737154296185,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-08",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.8164116492391029,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.8054705497463677,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-09",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3116171118054014,
+        "kvs": 0.38461538461538464,
+        "trees": 0.23076923076923078,
+        "oqs": 0.3090005757300056,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3592409896182119,
+        "kvs": 0.14285714285714285,
+        "trees": 0.2777777777777778,
+        "oqs": 0.2599586367510442,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-11",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.7387770946594524,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.8176876029817223,
+        "ex": false,
+        "ex_soft": 0.11940298507462686,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-12",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6391857662453178,
+        "kvs": 0.3333333333333333,
+        "trees": 0.6,
+        "oqs": 0.5241730331928837,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-13",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.547489691065247,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.715829897021749,
+        "ex": false,
+        "ex_soft": 0.14647887323943662,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-14",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6528867555872896,
+        "kvs": 0.7777777777777778,
+        "trees": 0.6923076923076923,
+        "oqs": 0.7076574085575865,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-15",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5839131380348936,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7660662841068694,
+        "ex": false,
+        "ex_soft": 0.1746987951807229,
+        "real_first": true
+      }
+    },
+    {
+      "task": "ad-16",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.18852139003421897,
+        "kvs": 0.0,
+        "trees": 0.5,
+        "oqs": 0.22950713001140632,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-17",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.2258293610828181,
+        "kvs": 0.0,
+        "trees": 0.5,
+        "oqs": 0.24194312036093937,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "ad-18",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "B",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6355863541837883,
+        "kvs": 0.6,
+        "trees": 0.6363636363636364,
+        "oqs": 0.6239833301824748,
+        "ex": false,
+        "ex_soft": 0.2962962962962963,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-01",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.547489691065247,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.715829897021749,
+        "ex": false,
+        "ex_soft": 0.9487179487179487,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-02",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5881740843081065,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.7293913614360354,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6718947290408059,
+        "kvs": 0.3333333333333333,
+        "trees": 0.75,
+        "oqs": 0.5850760207913798,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-04",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3346523903843054,
+        "kvs": 0.16666666666666666,
+        "trees": 0.5,
+        "oqs": 0.3337730190169907,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-05",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.48682024955928294,
+        "kvs": 0.4444444444444444,
+        "trees": 0.5,
+        "oqs": 0.47708823133457584,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-06",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5881740843081065,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.7293913614360354,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-07",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4101098270807142,
+        "kvs": 0.75,
+        "trees": 0.42857142857142855,
+        "oqs": 0.5295604185507142,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-08",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5692219268492962,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.723073975616432,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-09",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6625108142693045,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7922655095183396,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.48282037054430926,
+        "kvs": 0.375,
+        "trees": 0.6923076923076923,
+        "oqs": 0.5167093542840006,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-11",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5940207453300783,
+        "kvs": 0.6,
+        "trees": 0.7142857142857143,
+        "oqs": 0.6361021532052642,
+        "ex": false,
+        "ex_soft": 0.05172413793103448,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-12",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5759429473380903,
+        "kvs": 0.6,
+        "trees": 0.7142857142857143,
+        "oqs": 0.6300762205412682,
+        "ex": false,
+        "ex_soft": 0.05172413793103448,
+        "real_first": true
+      }
+    },
+    {
+      "task": "lu-13",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4223521614158927,
+        "kvs": 0.0,
+        "trees": 0.6923076923076923,
+        "oqs": 0.37155328457452835,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-14",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.33048753874033954,
+        "kvs": 0.0,
+        "trees": 0.5,
+        "oqs": 0.27682917958011316,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-15",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3804748239602616,
+        "kvs": 0.6666666666666666,
+        "trees": 0.375,
+        "oqs": 0.4740471635423094,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-16",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.28700934511903275,
+        "kvs": 0.125,
+        "trees": 0.5,
+        "oqs": 0.3040031150396776,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-17",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.32696072121654485,
+        "kvs": 0.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.34708214516741975,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "lu-18",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "B",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6983066124053541,
+        "kvs": 0.7142857142857143,
+        "trees": 0.6153846153846154,
+        "oqs": 0.675992314025228,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-01",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6012508784418107,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7718455309091751,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-02",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6092547104100017,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7745134748985719,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.375,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5117361258106536,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7420072800321226,
+        "ex": false,
+        "ex_soft": 0.23076923076923078,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-04",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6532033733746807,
+        "kvs": 1.0,
+        "trees": 0.5714285714285714,
+        "oqs": 0.741543981601084,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-05",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5531099583251811,
+        "kvs": 1.0,
+        "trees": 0.75,
+        "oqs": 0.767703319441727,
+        "ex": false,
+        "ex_soft": 0.7847222222222222,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-06",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5750333337134056,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.76310634933304,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-07",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6087350278411985,
+        "kvs": 1.0,
+        "trees": 0.75,
+        "oqs": 0.7862450092803995,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-08",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.3415,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3159409197779345,
+        "kvs": 0.6666666666666666,
+        "trees": 0.3076923076923077,
+        "oqs": 0.43009996471230294,
+        "ex": false,
+        "ex_soft": 0.03121516164994426,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-09",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.7495886806404783,
+        "kvs": 0.6,
+        "trees": 0.9090909090909091,
+        "oqs": 0.7528931965771292,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.75,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.6297229779837821,
+        "kvs": 0.5,
+        "trees": 0.6666666666666666,
+        "oqs": 0.5987965482168162,
+        "ex": false,
+        "ex_soft": 0.6,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-11",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5645731333574076,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7596196158810407,
+        "ex": false,
+        "ex_soft": 0.35,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-12",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0123,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.4570510602017221,
+        "kvs": 0.4666666666666667,
+        "trees": 0.6428571428571429,
+        "oqs": 0.5221916232418439,
+        "ex": false,
+        "ex_soft": 0.006329113924050633,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-13",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.19465172617671744,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.06488390872557248,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-14",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.40381123852138057,
+        "kvs": 0.25,
+        "trees": 0.4,
+        "oqs": 0.3512704128404602,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-15",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5704400209862915,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7615752450906687,
+        "ex": false,
+        "ex_soft": 0.02868617326448652,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mc-16",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3134155028587833,
+        "kvs": 0.3333333333333333,
+        "trees": 0.25,
+        "oqs": 0.29891627873070553,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mc-17",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5808141228983446,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.7269380409661149,
+        "ex": false,
+        "ex_soft": 0.5151515151515151,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-01",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5377182903681663,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.7506680015512935,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-02",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.5882,
+      "interpretation": "B",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3789779140854749,
+        "kvs": 0.0,
+        "trees": 0.75,
+        "oqs": 0.37632597136182494,
+        "ex": false,
+        "ex_soft": 0.0625,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-03",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5573704201812288,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.757218711488981,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-04",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5432179010635062,
+        "kvs": 1.0,
+        "trees": 0.6,
+        "oqs": 0.7144059670211688,
+        "ex": false,
+        "ex_soft": 0.948051948051948,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-05",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5185292180705302,
+        "kvs": 0.2,
+        "trees": 0.6363636363636364,
+        "oqs": 0.4516309514780555,
+        "ex": false,
+        "ex_soft": 0.8518518518518519,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-06",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.8,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5706974737576176,
+        "kvs": 0.38461538461538464,
+        "trees": 0.5652173913043478,
+        "oqs": 0.5068434165591166,
+        "ex": false,
+        "ex_soft": 0.6666666666666666,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-07",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.875,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5411386127969552,
+        "kvs": 0.5,
+        "trees": 0.75,
+        "oqs": 0.5970462042656517,
+        "ex": false,
+        "ex_soft": 0.12727272727272726,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-08",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.37461101311261347,
+        "kvs": 0.3333333333333333,
+        "trees": 0.4,
+        "oqs": 0.36931478214864893,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-09",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5198456675364517,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.17328188917881723,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-10",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.8337,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5617663847998159,
+        "kvs": 0.5555555555555556,
+        "trees": 0.6,
+        "oqs": 0.5724406467851239,
+        "ex": false,
+        "ex_soft": 0.06825823806321453,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-11",
+      "epoch": 1,
+      "category": "pass",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": true,
+        "w2": true,
+        "w3": true
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5728234147445136,
+        "kvs": 1.0,
+        "trees": 0.5714285714285714,
+        "oqs": 0.714750662057695,
+        "ex": false,
+        "ex_soft": 0.8043478260869565,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-12",
+      "epoch": 1,
+      "category": "rejected",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3165747022463057,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.10552490074876857,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-13",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.8,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5434853209179962,
+        "kvs": 1.0,
+        "trees": 0.4,
+        "oqs": 0.6478284403059987,
+        "ex": false,
+        "ex_soft": 0.11764705882352941,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-14",
+      "epoch": 1,
+      "category": "query_error",
+      "f1": 0.0,
+      "interpretation": null,
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.5158547391272592,
+        "kvs": 0.0,
+        "trees": 0.0,
+        "oqs": 0.1719515797090864,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-15",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.739611436640472,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.8179657169753954,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-16",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "A",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.7525660192231723,
+        "kvs": 1.0,
+        "trees": 0.7142857142857143,
+        "oqs": 0.8222839111696288,
+        "ex": true,
+        "ex_soft": 1.0,
+        "real_first": true
+      }
+    },
+    {
+      "task": "mv-17",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.1111,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.35442714795435554,
+        "kvs": 0.3333333333333333,
+        "trees": 0.4,
+        "oqs": 0.3625868270958963,
+        "ex": false,
+        "ex_soft": 0.010869565217391304,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-18",
+      "epoch": 1,
+      "category": "wrong_real",
+      "f1": 0.0,
+      "interpretation": "A",
+      "real": false,
+      "worlds": {
+        "real": false,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3949330349227238,
+        "kvs": 1.0,
+        "trees": 0.3333333333333333,
+        "oqs": 0.5760887894186857,
+        "ex": false,
+        "ex_soft": 0.16666666666666666,
+        "real_first": false
+      }
+    },
+    {
+      "task": "mv-19",
+      "epoch": 1,
+      "category": "wrong_witness",
+      "f1": 1.0,
+      "interpretation": "B",
+      "real": true,
+      "worlds": {
+        "real": true,
+        "w1": false,
+        "w2": false,
+        "w3": false
+      },
+      "overpassnl": {
+        "em": false,
+        "chrf": 0.3996126670283478,
+        "kvs": 0.25,
+        "trees": 0.6666666666666666,
+        "oqs": 0.43875977789833814,
+        "ex": false,
+        "ex_soft": 0.0,
+        "real_first": false
+      }
+    }
+  ]
+}

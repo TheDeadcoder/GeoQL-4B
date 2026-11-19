@@ -1,0 +1,10 @@
+old GRPO reward on the SFT model's samples (mean over samples)
+                                      total  format     kvs  struct    chrf      em
+  reported start of training           0.25   -0.25    0.50    0.62    0.58       -
+  reported end of training (500)       0.60   -0.03    0.70    0.83    0.78       -
+  train prompts, temperature 1.0      0.344  -0.176   0.583   0.674   0.610   0.170   n=4000
+  train prompts, greedy               0.710  -0.013   0.794   0.862   0.825   0.354   n=500
+  dev prompts, temperature 1.0        0.272  -0.173   0.476   0.648   0.554   0.116   n=4000
+  dev prompts, greedy                 0.562  -0.017   0.617   0.813   0.719   0.181   n=1000
+
+greedy dev outputs, merged SFT model vs the stored LoRA-path predictions: 162 of 1000 differ (16.2%; GRPO step 100 differed in 18.1%)
