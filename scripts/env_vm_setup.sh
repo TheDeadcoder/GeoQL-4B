@@ -30,7 +30,7 @@ mkdir -p geoql-env && tar xf geoql-env.tar -C geoql-env
 PY=/content/venv/bin/python
 [ -x "$PY" ] || uv venv -q --python 3.11 /content/venv
 uv pip install -q --python "$PY" unsloth==2025.11.1 unsloth_zoo==2025.11.2 vllm==0.11.0 trl==0.23.0 \
-  transformers==4.57.2 datasets==5.0.0 sacrebleu -e /content/geoql-env
+  transformers==4.57.2 datasets==5.0.0 torchao==0.13.0 sacrebleu -e /content/geoql-env
 "$PY" -c "import torch, trl, vllm, geoql_env; print('torch', torch.__version__, 'vllm', vllm.__version__, 'trl', trl.__version__)"
 
 echo "== worlds and witness worlds"
