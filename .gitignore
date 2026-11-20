@@ -9,3 +9,4 @@ data_out/*.jsonl
 wandb/
 .env*
 .DS_Store
+checkpoints/
