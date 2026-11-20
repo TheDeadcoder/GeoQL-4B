@@ -4,10 +4,13 @@
 # training tasks, which keeps the tasks with a signal; its evaluation; a 2-step smoke run; then per arm (environment
 # reward, then old reward) GRPO and the evaluation of its checkpoints. Evaluation covers the 180 held-out tasks and
 # the 67 benchmark test tasks, 8 samples at temperature 1.0 and greedy. A finished stage leaves a mark in marks/
-# and is skipped when the job runs again.
+# and is skipped when the job runs again. SEED is the training seed; a run for another seed reuses the first
+# seed's training tasks when its keep.txt is in out/ and marks/ holds profile and smoke. At the end,
+# out/manifest.sha256 lists the outputs to download, adapters included.
 set -uo pipefail
 cd /content
 STEPS=${STEPS:-150}
+SEED=${SEED:-0}
 PY=/content/venv/bin/python
 SFT=Melikshah/GeoQL-4B-SFT
 T=/content/geoql-env/data/train-tasks
@@ -46,7 +49,12 @@ smoke() {
 }
 
 train() {
-  $PY env_grpo.py --reward "$1" --tasks $T --keep out/keep.txt --steps "$STEPS" --out "out/$1"
+  $PY env_grpo.py --reward "$1" --tasks $T --keep out/keep.txt --steps "$STEPS" --seed "$SEED" --out "out/$1"
+}
+
+manifest() {
+  (cd out && sha256sum *.jsonl keep.txt env/log_history.json old/log_history.json env/final/* old/final/* \
+    > manifest.sha256)
 }
 
 token() {
@@ -70,5 +78,6 @@ for arm in env old; do
     run "eval-$arm-$step" evaluate "$arm-$step" "out/$arm/checkpoint-$step"
   done
 done
+run manifest manifest
 echo PILOT_DONE
 touch pilot.done
